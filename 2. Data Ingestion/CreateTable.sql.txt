@@ -1,0 +1,10 @@
+create table TR_NEWS
+(id integer,
+ date_created timestamp,
+ date_modified timestamp,
+ title text,
+ content text,
+ publication_date date,
+ author text,
+ category text
+)
