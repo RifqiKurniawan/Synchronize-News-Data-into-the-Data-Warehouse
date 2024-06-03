@@ -50,3 +50,4 @@ The next process, once the data has been generated, is to import it into the Pos
 
 
 ## Data Ingestion
+Before performing the data ingestion process, we need to undertake several steps where we assume that the data we are bringing from the operational database is quite large (starting from 2016). Therefore, we need to perform an incremental load process, which involves fetching data in iterations to split the initial data retrieval process. This approach prevents overloading the environment of both the source and target databases.
