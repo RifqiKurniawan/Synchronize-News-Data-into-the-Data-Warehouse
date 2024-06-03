@@ -6,7 +6,7 @@ To create a robust and reliable ETL (Extract, Transform, Load) process for impor
 
 **Languange Used**
 
-Python - For creating data ingestion, incremental load and data orchestration 
+Python - for creating data ingestion, incremental load and data orchestration 
 
 SQL - for creating and querying the Postgres tables, data ingestion and ETL Process
 
