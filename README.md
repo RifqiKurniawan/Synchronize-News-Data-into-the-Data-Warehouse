@@ -60,6 +60,9 @@ Before performing the data ingestion process, we need to undertake several steps
 ![plot](Images/IncrementalLoadDataOracle1.JPG)
 
 ## Staging layer
-In this data Staging process, there are two processes to be created. The first process involves extracting data from the source by only taking delta data based on the created time and modified time. This approach ensures that the amount of data retrieved in each extraction is not excessive, thus avoiding overburdening the process (**Extract_News.py**). The second process involves extracting IDs from the source data for all records as a reference for comparison between the existing data in the data warehouse and the data in the source. This comparison enables the identification of data that has been hard deleted(**Extract_ID_News.py**).
+In this data Staging process, there are two processes to be created. 
+The first process involves extracting data from the source by only taking delta data based on the created time and modified time. This approach ensures that the amount of data retrieved in each extraction is not excessive, thus avoiding overburdening the process (**Extract_News.py**). 
+
+The second process involves extracting IDs from the source data for all records as a reference for comparison between the existing data in the data warehouse and the data in the source. This comparison enables the identification of data that has been hard deleted(**Extract_ID_News.py**).
 
 
