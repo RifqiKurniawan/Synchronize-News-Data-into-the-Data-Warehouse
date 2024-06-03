@@ -1,2 +1,2 @@
-# Synchronize-News-Data-into-the-Data-Warehouse
+# Synchronize News Data into the Data Warehouse
 Engineer and Analytics Portfolio
