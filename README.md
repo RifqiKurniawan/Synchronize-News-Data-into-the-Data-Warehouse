@@ -41,4 +41,5 @@ So, to create dummy data, I used a Python library called Faker. The data consist
 
 ![](Images/exceldatagenerate.JPG)
 
-The next process, once the data has been generated, is to import it into the PostgreSQL database, where this table functions as an OLTP table. For detailed scripts, please refer to **Folder 1: Generate Data**.
+The next process, once the data has been generated, is to import it into the PostgreSQL database, where this table functions as an OLTP table. For detailed scripts, please refer to 
+**Folder 1: Generate Data**(https://github.com/RifqiKurniawan/Synchronize_News_Data_into_the_DataWarehouse).
