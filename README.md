@@ -51,11 +51,15 @@ The next process, once the data has been generated, is to import it into the Pos
 
 ## Data Ingestion
 Before performing the data ingestion process, we need to undertake several steps where we assume that the data we are bringing from the operational database is quite large (starting from 2016). Therefore, we need to perform an incremental load process, which involves fetching data in iterations to split the initial data retrieval process. This approach prevents overloading the environment of both the source and target databases.
+**IncrementalLoad.py**
 
 **Incrremental Load Process**
 ![plot](Images/IncrementalLoadDataPython.JPG)
 
 **Result Load Process**
 ![plot](Images/IncrementalLoadDataOracle1.JPG)
+
+## Staging layer
+In this data Staging process, there are two processes to be created. The first process involves extracting data from the source by only taking delta data based on the created time and modified time. This approach ensures that the amount of data retrieved in each extraction is not excessive, thus avoiding overburdening the process (**Extract_News.py**). The second process involves extracting IDs from the source data for all records as a reference for comparison between the existing data in the data warehouse and the data in the source. This comparison enables the identification of data that has been hard deleted(**Extract_ID_News.py**).
 
 
