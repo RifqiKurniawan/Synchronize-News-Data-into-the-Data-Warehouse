@@ -46,7 +46,7 @@ So, to create dummy data, I used a Python library called Faker. The data consist
 The next process, once the data has been generated, is to import it into the PostgreSQL database, where this table functions as an OLTP table. For detailed scripts, please refer to **Folder 1: Generate Data**(https://github.com/RifqiKurniawan/Synchronize_News_Data_into_the_DataWarehouse).
 
 **Postgres Result**
-![](Images/ResultPostgress.JPG)
+![](Images/ResultPostgress1.JPG)
 
 
 ## Data Ingestion
@@ -56,6 +56,6 @@ Before performing the data ingestion process, we need to undertake several steps
 ![plot](Images/IncrementalLoadDataPython.JPG)
 
 **Result Load Process**
-![plot](Images/IncrementalLoadDataOracle.JPG)
+![plot](Images/IncrementalLoadDataOracle1.JPG)
 
 
