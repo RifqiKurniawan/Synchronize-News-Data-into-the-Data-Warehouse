@@ -38,8 +38,9 @@ so this is step for the creation of this ETL process,
 So, to create dummy data, I used a Python library called Faker. The data consists of 100,000 rows and includes several categories such as 'World', 'Technology', 'Sports', 'Business', 'Entertainment', 'Health', 'Politics', 'Technology', and 'Science'.
 
 ![plot](Images/Generatedatapython.JPG)
-
+**Python Process**
 
 ![](Images/exceldatagenerate.JPG)
+**Excel Result**
 
 The next process, once the data has been generated, is to import it into the PostgreSQL database, where this table functions as an OLTP table. For detailed scripts, please refer to **Folder 1: Generate Data**(https://github.com/RifqiKurniawan/Synchronize_News_Data_into_the_DataWarehouse).
