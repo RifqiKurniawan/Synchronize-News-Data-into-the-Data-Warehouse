@@ -27,4 +27,4 @@ The Data Management Process consist of:
 The main goal of creating this architecture is to understand the plan for building the ETL pipeline process from start to finish In accordance with the previously stated objective.
 Here's data pipiline architecture that i used:
 
-![](Images/Architecture ETL Process.JPG)
+![](Images/ArchitectureETLProcess.JPG)
