@@ -37,17 +37,25 @@ so this is step for the creation of this ETL process,
 ## Generate data
 So, to create dummy data, I used a Python library called Faker. The data consists of 100,000 rows and includes several categories such as 'World', 'Technology', 'Sports', 'Business', 'Entertainment', 'Health', 'Politics', 'Technology', and 'Science'.
 
-![plot](Images/Generatedatapython.JPG)
 **Python Process**
+![plot](Images/Generatedatapython.JPG)
 
-![](Images/exceldatagenerate.JPG)
 **Excel Result**
+![](Images/exceldatagenerate.JPG)
 
 The next process, once the data has been generated, is to import it into the PostgreSQL database, where this table functions as an OLTP table. For detailed scripts, please refer to **Folder 1: Generate Data**(https://github.com/RifqiKurniawan/Synchronize_News_Data_into_the_DataWarehouse).
 
-![](Images/ResultPostgress.JPG)
 **Postgres Result**
+![](Images/ResultPostgress.JPG)
 
 
 ## Data Ingestion
 Before performing the data ingestion process, we need to undertake several steps where we assume that the data we are bringing from the operational database is quite large (starting from 2016). Therefore, we need to perform an incremental load process, which involves fetching data in iterations to split the initial data retrieval process. This approach prevents overloading the environment of both the source and target databases.
+
+**Incrremental Load Process**
+![plot](Images/IncrementalLoadDataPython.JPG)
+
+**Result Load Process**
+![plot](Images/IncrementalLoadDataOracle.JPG)
+
+
