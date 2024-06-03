@@ -30,16 +30,16 @@ Here's data pipiline architecture that i used:
 ![](Images/ArchitectureETLProcess.JPG)
 
 so this is step for the creation of this ETL process, 
-  1. it starts with extracting news data already present in the PostgreSQL database using a Python process.
+  1. It starts with extracting news data already present in the PostgreSQL database using a Python process.
   2. The data will then be loaded into a data warehouse built using an Oracle database in the staging table.
   3. From the staging table, a transformation process will be carried out on the data in accordance with the points previously explained.
 
 ## Generate data
 So, to create dummy data, I used a Python library called Faker. The data consists of 100,000 rows and includes several categories such as 'World', 'Technology', 'Sports', 'Business', 'Entertainment', 'Health', 'Politics', 'Technology', and 'Science'.
 
-![](Images/Generatedatapython.JPG)
+![plot](Images/Generatedatapython.JPG)
+
 
 ![](Images/exceldatagenerate.JPG)
 
-The next process, once the data has been generated, is to import it into the PostgreSQL database, where this table functions as an OLTP table. For detailed scripts, please refer to 
-**Folder 1: Generate Data**(https://github.com/RifqiKurniawan/Synchronize_News_Data_into_the_DataWarehouse).
+The next process, once the data has been generated, is to import it into the PostgreSQL database, where this table functions as an OLTP table. For detailed scripts, please refer to **Folder 1: Generate Data**(https://github.com/RifqiKurniawan/Synchronize_News_Data_into_the_DataWarehouse).
