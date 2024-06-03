@@ -79,6 +79,7 @@ Firstly, the main table adheres to the previous requirements, where it includes 
 ![plot](Images/ETLProcessOracle.JPG)
 
 Secondly, for the creation of SCD Type 4, it is utilized to store historical processes that can be used as a reference for CDC (Change Data Capture) if needed, with the note that only the latest changed data will be obtained.
+
 **Versioning Table SCD Type 4**
 ![plot](Images/TableVersionSCD4.JPG)
 
