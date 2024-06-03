@@ -37,4 +37,8 @@ so this is step for the creation of this ETL process,
 ## Generate data
 So, to create dummy data, I used a Python library called Faker. The data consists of 100,000 rows and includes several categories such as 'World', 'Technology', 'Sports', 'Business', 'Entertainment', 'Health', 'Politics', 'Technology', and 'Science'.
 
-The next process, once the data has been generated, is to import it into the PostgreSQL database, where this table functions as an OLTP table. For detailed scripts, please refer to folder 1: generate data.
+![](Images/Generatedatapython.JPG)
+
+![](Images/exceldatagenerate.JPG)
+
+The next process, once the data has been generated, is to import it into the PostgreSQL database, where this table functions as an OLTP table. For detailed scripts, please refer to **Folder 1: Generate Data**.
