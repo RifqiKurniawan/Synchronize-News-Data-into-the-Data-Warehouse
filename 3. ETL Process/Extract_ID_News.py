@@ -35,8 +35,8 @@ for j in df_tr_news.columns:
             dtype[j] = types.DATE()
 
 #LOAD DATA
-connection_string = 'Shrpt/Shrpt23@10.207.231.214:1521/SHRRPT'
-connection_string1= 'oracle+cx_oracle://Shrpt:Shrpt23@10.207.231.214:1521/?service_name=SHRRPT'
+connection_string = 'user/password@localhost:1521/db'
+connection_string1= 'oracle+cx_oracle://user:password@localhost:1521/?service_name=db'
 engine = create_engine(connection_string1)
 
 con = cx.connect(connection_string)
