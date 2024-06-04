@@ -76,7 +76,7 @@ In creating the ETL process for the data warehouse, there are two objectives for
 Firstly, the main table adheres to the previous requirements, where it includes the creation date when the data is first entered into the data warehouse, the update date indicating the last time the data was updated, and the delete date, which is filled when the data is deleted. 
 
 **Oracle Process DWH**
-![plot](Images/ETLProcessOracle.JPG)
+![plot](Images/ETLProcessOracle1.JPG)
 
 Secondly, for the creation of SCD Type 4, it is utilized to store historical processes that can be used as a reference for CDC (Change Data Capture) if needed, with the note that only the latest changed data will be obtained.
 
