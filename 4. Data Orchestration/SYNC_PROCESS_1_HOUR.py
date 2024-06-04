@@ -36,8 +36,16 @@ def path_query(path_job, job):
 
 
 # path_job=f'/home/devsmapp/.local/lib/python3.9/site-packages/airflow/source_dags/damen/project/sharp/python/email/send_email_error_sync.py'
+sync_id_news_postgres_to_oracle = SSHOperator(
+                            task_id='POSTGRES_ID_NEWS',
+                            ssh_conn_id= 'PYTHON',
+                            cmd_timeout=None,
+                            command=f'python3 /opt/source_spark/DAMEN/SHARP/PROJECT/OTHERS/Extract_ID.py', 
+                            dag = dag
+                          )
+
 sync_postgres_to_oracle = SSHOperator(
-                            task_id='SYNC_DATA_INGESTION_POSTGRES',
+                            task_id='INGESTION_POSTGRES',
                             ssh_conn_id= 'PYTHON',
                             cmd_timeout=None,
                             command=f'python3 /opt/source_spark/DAMEN/SHARP/PROJECT/OTHERS/Extract_News.py', 
@@ -46,7 +54,7 @@ sync_postgres_to_oracle = SSHOperator(
 
 sync_process_oracle = SQLExecuteQueryOperator(
                             task_id='SYNC_PROCESS_ORACLE',
-                            conn_id= 'conn_sharp_dev',
+                            conn_id= 'ORACLE',
                             sql = path_query('/home/devsmapp/.local/lib/python3.9/site-packages/airflow/source_dags/damen/project/sharp/python/', 'USP_SYNC_TR_NEWS'),
                             autocommit ='True',
                             dag = dag
@@ -56,4 +64,4 @@ sync_process_oracle = SQLExecuteQueryOperator(
 start = DummyOperator(task_id="start", dag=dag)
 end = DummyOperator(task_id="end", dag=dag)
 
-start >> sync_postgres_to_oracle >> sync_process_oracle >> end
+start >> [sync_postgres_to_oracle,sync_id_news_postgres_to_oracle] >> sync_process_oracle >> end
