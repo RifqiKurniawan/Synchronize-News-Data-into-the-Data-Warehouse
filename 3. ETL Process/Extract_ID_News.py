@@ -8,7 +8,7 @@ warnings.filterwarnings('ignore')
 #Connection Configuration
 #Posgre
 conn_pg = psycopg2.connect(
-      database="dataengineer", user='postgres', password='Postgres123', host='10.207.228.107', port= '5432'
+      database="dedb", user='postgres', password='postgres123', host='10.207.228.110', port= '5432'
 )
 
 cursor_pg = conn_pg.cursor()
