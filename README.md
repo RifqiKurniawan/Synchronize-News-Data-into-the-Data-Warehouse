@@ -83,4 +83,8 @@ Secondly, for the creation of SCD Type 4, it is utilized to store historical pro
 **Versioning Table SCD Type 4**
 ![plot](Images/TableVersionSCD4.JPG)
 
+## Orchestration layer ##
+
+This brief guide covered the setup and usage of Apache Airflow with Python and Oracle connectors to orchestrate a data pipeline. The example workflow extracts news data using Python from postgres, processes it, and loads it into an Oracle database. By following these steps, you can create more complex workflows to handle various data engineering tasks.(**ETL Process Oracle.sql**) 
+
 
